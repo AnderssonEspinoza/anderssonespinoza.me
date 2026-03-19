@@ -4,12 +4,15 @@ const navLinks = document.querySelector('.nav-links');
 
 menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('active'); // Mostrar/Ocultar enlaces
+    const isOpen = navLinks.classList.contains('active');
+    menuIcon.setAttribute('aria-expanded', String(isOpen));
 });
 
 // Cerrar el menú al hacer clic en un enlace (opcional)
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active'); // Ocultar el menú
+        menuIcon.setAttribute('aria-expanded', 'false');
     });
 });
 
@@ -223,5 +226,4 @@ form.addEventListener("submit", function (e) {
             });
     });
 });
-
 
