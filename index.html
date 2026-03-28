@@ -443,10 +443,10 @@
             border-color: rgba(148, 163, 184, 0.35);
         }
         .proj-link-ghost:hover {
-            color: #f8fafc;
-            border-color: rgba(255, 255, 255, 0.85);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 22px rgba(255, 255, 255, 0.15);
+            color: #e2e8f0;
+            border-color: rgba(255, 255, 255, 0.45);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
         }
         .proj-expand-btn {
             color: var(--text-muted);
@@ -1116,18 +1116,18 @@
                 id: 1,
                 category: "CIBERSEGURIDAD · OPEN SOURCE",
                 title: "ZeroDay",
-                shortDesc: "App open source de microlearning en ciberseguridad con rutas por nivel, lecciones guiadas, quizzes y noticias via RSS.",
-                fullDesc: "ZeroDay es una plataforma open source construida con React y Vite para estudiar ciberseguridad en sesiones cortas y practicas. Incluye rutas por nivel, lecciones guiadas, mini labs, flashcards con repeticion espaciada, quizzes por dificultad, glosario vivo y noticias automaticas desde fuentes RSS.",
+                shortDesc: "App open source de microlearning en ciberseguridad con rutas por nivel, lecciones guiadas, quizzes y noticias vía RSS.",
+                fullDesc: "ZeroDay es una plataforma open source construida con React y Vite para estudiar ciberseguridad en sesiones cortas y prácticas. Incluye rutas por nivel, lecciones guiadas, mini labs, flashcards con repetición espaciada, quizzes por dificultad, glosario vivo y noticias automáticas desde fuentes RSS.",
                 features: [
                     "Roadmap de aprendizaje por niveles",
                     "Lecciones guiadas con mini labs",
                     "Quizzes basico, aplicado y por escenarios",
-                    "Flashcards con repeticion espaciada",
+                    "Flashcards con repetición espaciada",
                     "Tracking de progreso local y notas de estudio",
-                    "Feed automatico de noticias de ciberseguridad"
+                    "Feed automático de noticias de ciberseguridad"
                 ],
                 stack: ["React", "Vite", "Tailwind CSS", "React Router", "Framer Motion", "Node.js", "GitHub Actions"],
-                role: "Diseno y desarrollo del producto, arquitectura frontend y flujo para contribuciones open source.",
+                role: "Diseñador y desarrollador fullstack. Arquitectura, UI/UX, contenido de módulos y pipeline de deploy.",
                 status: "live",
                 statusLabel: "Live · Open Source",
                 image: "./public/zeroday-web.png",
@@ -1147,9 +1147,9 @@
                     "Reportes y panel administrativo"
                 ],
                 stack: ["Laravel", "PHP", "MySQL", "Blade"],
-                role: "Desarrollo backend principal, diseno de BD y logica de negocio.",
+                role: "Desarrollo backend principal, diseño de BD y lógica de negocio.",
                 status: "live",
-                statusLabel: "En produccion",
+                statusLabel: "En producción",
                 image: "./public/clientes-disponibles.png",
                 demo: "https://www.gestionclientes.app",
                 code: "https://github.com/AnderssonEspinoza/gestion-clientes-laravel"
@@ -1159,9 +1159,9 @@
                 category: "EDTECH · PLATAFORMA",
                 title: "UniHelp",
                 shortDesc: "Plataforma donde estudiantes publican dudas de cursos y reciben respuestas utiles con sistema de puntos.",
-                fullDesc: "UniHelp promueve aprendizaje colaborativo universitario con publicacion de dudas, sistema de reputacion y flujo orientado a resolver problemas academicos reales.",
+                fullDesc: "UniHelp promueve aprendizaje colaborativo universitario con publicación de dudas, sistema de reputación y flujo orientado a resolver problemas académicos reales.",
                 features: [
-                    "Preguntas y respuestas con reputacion",
+                    "Preguntas y respuestas con reputación",
                     "Categorias por curso y area",
                     "Sistema de puntos y engagement",
                     "Arquitectura moderna para escalado"
@@ -1169,7 +1169,7 @@
                 stack: ["React", "Vite", "Tailwind", "Node.js", "Express", "Prisma", "PostgreSQL"],
                 role: "Founder y desarrollo fullstack de producto.",
                 status: "private",
-                statusLabel: "En produccion · Privado",
+                statusLabel: "En producción · Privado",
                 image: "./public/unihelp.png",
                 demo: null,
                 code: null
@@ -1189,7 +1189,7 @@
                 stack: ["React", "Firebase", "Tailwind CSS", "Gemini API", "Web Speech API"],
                 role: "Diseno de experiencia y desarrollo fullstack orientado a negocio real.",
                 status: "private",
-                statusLabel: "En produccion · Privado",
+                statusLabel: "En producción · Privado",
                 image: "./public/smartpos.png",
                 demo: null,
                 code: null
@@ -1231,14 +1231,14 @@
                     <div class="proj-footer">
                         <div class="proj-links">
                             ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="proj-link-btn proj-link-primary" onclick="event.stopPropagation()">${extIcon()} Demo</a>` : ""}
-                            ${p.code ? `<a href="${p.code}" target="_blank" rel="noopener noreferrer" class="proj-link-btn proj-link-ghost" onclick="event.stopPropagation()">${ghIcon()} Codigo</a>` : ""}
+                            ${p.code ? `<a href="${p.code}" target="_blank" rel="noopener noreferrer" class="proj-link-btn proj-link-ghost" onclick="event.stopPropagation()">${ghIcon()} Código</a>` : ""}
                         </div>
-                        <button class="proj-expand-btn" data-expand-id="${p.id}">Ver mas <span class="proj-expand-icon">v</span></button>
+                        <button class="proj-expand-btn" data-expand-id="${p.id}">Ver más <span class="proj-expand-icon">v</span></button>
                     </div>
                     <div class="proj-expanded" data-expanded-id="${p.id}">
                         <div class="proj-expanded-inner">
                             <div class="proj-block">
-                                <h4>Que hace</h4>
+                                <h4>Qué hace</h4>
                                 <p>${p.fullDesc}</p>
                             </div>
                             <div class="proj-block">
@@ -1272,9 +1272,9 @@
             const footer = document.getElementById("proj-modal-footer");
             footer.innerHTML = "";
             if (p.demo) footer.innerHTML += `<a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="proj-link-btn proj-link-primary">${extIcon()} Ver Demo en vivo</a>`;
-            if (p.code) footer.innerHTML += `<a href="${p.code}" target="_blank" rel="noopener noreferrer" class="proj-link-btn proj-link-ghost">${ghIcon()} Ver codigo</a>`;
+            if (p.code) footer.innerHTML += `<a href="${p.code}" target="_blank" rel="noopener noreferrer" class="proj-link-btn proj-link-ghost">${ghIcon()} Ver código</a>`;
             if (!p.demo && !p.code) {
-                footer.innerHTML += '<div class="proj-private-note">Codigo privado. Disponible bajo solicitud.</div>';
+                footer.innerHTML += '<div class="proj-private-note">Código privado. Disponible bajo solicitud.</div>';
                 footer.innerHTML += '<a href="https://wa.me/51972680667" target="_blank" rel="noopener noreferrer" class="proj-link-btn proj-link-ghost">Solicitar acceso -></a>';
             }
 
